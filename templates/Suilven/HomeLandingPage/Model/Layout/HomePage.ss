@@ -19,11 +19,17 @@
 
     <h1>Adding Custom Animations in AOS</h1>
     <p>You need to scroll down to see the effect.</p>
-    <div class="box a" data-aos="rotate-ac" data-aos-duration="500" data-aos-easing="ease-in-quad">
-        <h2>Animated using <code>rotate-ac</code>.</h2></div>
-    <div class="box b" data-aos="rotate-c" data-aos-duration="1000" data-aos-easing="ease-in-sine"><h2>Animated using <code>rotate-c</code>.</h2></div>
 
-
+    <h2>Animation here?</h2>
+    <div class="box a" data-aos="fade-up">
+        <h2>Animated using fade-up.</h2>
+    </div>
+    <div class="box b" data-aos="flip-down">
+        <h2>Animated using flip-down.</h2>
+    </div>
+    <div class="box b" data-aos="zoom-in">
+        <h2>Animated using zoom-in.</h2>
+    </div>
 
 
     $Form
