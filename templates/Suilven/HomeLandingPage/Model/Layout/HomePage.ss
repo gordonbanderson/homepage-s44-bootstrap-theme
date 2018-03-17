@@ -15,7 +15,21 @@
 
     Mauris vel sem eget elit rutrum euismod id at metus. Donec congue viverra eros, eget malesuada urna sodales id. Sed pellentesque odio a nunc laoreet placerat. Quisque et luctus mi. Phasellus scelerisque arcu vel semper malesuada. Fusce neque nunc, dapibus non augue quis, aliquam ullamcorper magna. Ut et laoreet mauris. Donec a dui enim. Nam dapibus non libero nec tincidunt. Aenean a ultrices purus, at fermentum urna. Cras in tincidunt lacus.
 
+    <h1>$Title</h1>
+    $Content
 
+    <hr/>
+    <% loop $SplitClassNameDataListIntoGridRows('Page',3, 12) %>
+        <div class="row">
+            <% loop $Columns %>
+                <div class="span3"><h4><a href="$Link">$Title</a>
+                </h4>
+                </div><!-- end of span 4 -->
+            <% end_loop %>
+        </div><!-- end of row -->
+    <% end_loop %>
+
+    <hr/>
 
     <h1>Adding Custom Animations in AOS</h1>
     <p>You need to scroll down to see the effect.</p>
