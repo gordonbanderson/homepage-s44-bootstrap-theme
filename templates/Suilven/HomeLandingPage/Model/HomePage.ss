@@ -20,8 +20,6 @@
     <% require javascript("weboftalent-twitter-tools/javascript/render-twitter-embeds.js") %>
 
 <script type="text/javascript">
-    console.log('Initliasing AOIS');
-    alert('test');
     AOS.init();
 </script>
 </body>

@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<main role="main" class="container" style="background: yellow;">
+<main role="main" class="container">
 	<h1 class="mt-5">$Title</h1>
 	$Content
 
