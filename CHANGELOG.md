@@ -1,5 +1,8 @@
 # Change Log
 
+## [1.0.2](https://github.com/gordonbanderson/homepage-ss4-bootstrap-theme/tree/1.0.2) (2018-03-19)
+[Full Changelog](https://github.com/gordonbanderson/homepage-ss4-bootstrap-theme/compare/1.0.1...1.0.2)
+
 ## [1.0.1](https://github.com/gordonbanderson/homepage-ss4-bootstrap-theme/tree/1.0.1) (2018-03-19)
 [Full Changelog](https://github.com/gordonbanderson/homepage-ss4-bootstrap-theme/compare/1.0.0...1.0.1)
 
