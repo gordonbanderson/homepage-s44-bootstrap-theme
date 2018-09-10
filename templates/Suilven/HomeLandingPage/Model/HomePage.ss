@@ -18,8 +18,5 @@
     <% include AllJavaScriptFiles %>
     <% require javascript("weboftalent/twitter-tools:javascript/render-twitter-embeds.js") %>
 
-<script type="text/javascript">
-    AOS.init();
-</script>
 </body>
 </html>
