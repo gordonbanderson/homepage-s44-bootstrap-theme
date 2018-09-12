@@ -1,55 +1,66 @@
-<% include Header %>
-<div class="banner" style="background-image: url('/banners/bleak.jpg'); padding: 10em 0 0;text-align: center;min-height: 600px;">
-    <div class="container">
-        <h2>Contrary to popular belief, Lorem Ipsum simply</h2>
-        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-        <a href="singlepage.html">READ MORE</a>
-    </div>
-</div>
+<% include FeaturedSlider %>
 
 <main role="main" class="container">
-	<h1 class="mt-5">$Title</h1>
-	$Content
-
-    Duis feugiat, mauris ut vestibulum venenatis, quam massa rhoncus est, quis rhoncus ante odio et diam. Suspendisse a nulla purus. Nulla porta purus et purus bibendum facilisis. Sed mattis sapien sed eros tempor, in ultricies arcu finibus. Donec sed malesuada est. Suspendisse potenti. Ut vel enim id ligula euismod bibendum. Aenean posuere turpis lorem, eu sodales tortor rutrum quis. Mauris libero mauris, viverra a dignissim ut, molestie quis lorem. In luctus, sem vel faucibus faucibus, diam arcu eleifend massa, in fringilla lectus nisi tincidunt purus. Aliquam id neque ac tellus pulvinar laoreet nec sed libero. Vivamus ullamcorper, erat sed feugiat tempus, nunc ante hendrerit dolor, ac fringilla tellus neque eu enim.
-
-    Mauris vel sem eget elit rutrum euismod id at metus. Donec congue viverra eros, eget malesuada urna sodales id. Sed pellentesque odio a nunc laoreet placerat. Quisque et luctus mi. Phasellus scelerisque arcu vel semper malesuada. Fusce neque nunc, dapibus non augue quis, aliquam ullamcorper magna. Ut et laoreet mauris. Donec a dui enim. Nam dapibus non libero nec tincidunt. Aenean a ultrices purus, at fermentum urna. Cras in tincidunt lacus.
-
-    <h1>$Title</h1>
+    <h1 class="mt-5">$Title</h1>
     $Content
 
-    <hr/>
-    <% loop $SplitClassNameDataListIntoGridRows('Page',3, 12) %>
-        <div class="row">
-            <% loop $Columns %>
-                <div class="span3"><h4><a href="$Link">$Title</a>
-                </h4>
-                </div><!-- end of span 4 -->
-            <% end_loop %>
-        </div><!-- end of row -->
-    <% end_loop %>
 
-    <hr/>
 
-    <h1>Adding Custom Animations in AOS</h1>
-    <p>You need to scroll down to see the effect.</p>
 
-    <h2>Animation here?</h2>
-    <div class="box a" data-aos="fade-up">
-        <h2>Animated using fade-up.</h2>
+    <div class="row">
+        <% loop $UnFeaturedPosts %>
+            <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
+                <h4><a href="$Link">$Title</a></h4>
+
+                <div class="image-loading">
+                    <img data-srcset="$FeaturedImage.FocusFillMax(540,360).URL 576w,
+                            $FeaturedImage.FocusFillMax(720,480).URL 768w"
+                         data-src="$FeaturedImage.FocusFillMax(54,36).URL"
+                         class="lazyload" alt="test"/>
+                </div>
+
+                <noscript>
+                    <img srcset="$FeaturedImage.FocusFillMax(540,360).URL 576w,
+                            $FeaturedImage.FocusFillMax(720,480).URL 768w"
+                         src="$FeaturedImage.FocusFillMax(54,36).URL"
+                         class="lazyload" alt="test2"/>
+                </noscript>
+
+                <picture>
+                    <!--[if IE 9]><audio><![endif]-->
+                    <source
+                        data-srcset="//lorempixel.com/710/533/people/9/"
+                        media="(max-width: 990px)" />
+                    <source
+                        data-srcset="//lorempixel.com/930/698/people/8/"
+                        media="(max-width: 1024px)" />
+
+                    <source
+                        data-srcset="//lorempixel.com/1130/848/people/" />
+                    <!--[if IE 9]></audio><![endif]-->
+                    <img
+                        class="lazyload"
+                        data-src="//lorempixel.com/930/698/people/8/"
+                        alt="image with artdirection" />
+                </picture>
+
+                <picture>
+                    <source media="(max-width: 576px)"
+                            srcset="$FeaturedImage.FocusFillMax(540,360).URL 576w,
+                            $FeaturedImage.FocusFillMax(720,480).URL 768w"
+                            sizes="(min-width: 576px)">
+
+                    <img
+                         alt="F1 car in the gravel"
+                         title="F1 title car in the gravel"
+                         src="$FeaturedImage.FocusFillMax(240,160).URL 992w"
+                         class="lazyload"
+                         sizes="(min-width: 1066px) 689px,
+                calc(75vw - 137px)">
+                </picture>
+            </div>
+        <% end_loop %>
     </div>
-    <div class="box b" data-aos="flip-down">
-        <h2>Animated using flip-down.</h2>
-    </div>
-    <div class="box b" data-aos="zoom-in">
-        <h2>Animated using zoom-in.</h2>
-    </div>
-
-
-    $Form
-	$CommentsForm
 </main>
 
 <% include Footer %>
-
-
