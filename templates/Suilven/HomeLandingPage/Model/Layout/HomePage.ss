@@ -5,7 +5,21 @@
     $Content
 
 
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { ... }
+    540
 
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) { ... }
+    720
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) { ... }
+    960
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) { ... }
+    1140
 
     <div class="row">
         <% loop $UnFeaturedPosts %>
@@ -14,50 +28,22 @@
 
                 <div class="image-loading">
                     <img data-srcset="$FeaturedImage.FocusFillMax(540,360).URL 576w,
-                            $FeaturedImage.FocusFillMax(720,480).URL 768w"
+                            $FeaturedImage.FocusFillMax(380,253).URL 768w
+                        "
+                         data-sizes="auto"
                          data-src="$FeaturedImage.FocusFillMax(54,36).URL"
-                         class="lazyload" alt="test"/>
+                         class="lazyload" alt="$FeaturedImageCaption" title="$FeaturedImageCaption"
+                    />
                 </div>
-
                 <noscript>
                     <img srcset="$FeaturedImage.FocusFillMax(540,360).URL 576w,
-                            $FeaturedImage.FocusFillMax(720,480).URL 768w"
-                         src="$FeaturedImage.FocusFillMax(54,36).URL"
-                         class="lazyload" alt="test2"/>
+                            $FeaturedImage.FocusFillMax(380,253).URL 768w"
+                         src="$FeaturedImage.FocusFillMax(720,480).URL"
+                         class="lazyload" alt="$FeaturedImageCaption" title="$FeaturedImageCaption"
+                    />
                 </noscript>
 
-                <picture>
-                    <!--[if IE 9]><audio><![endif]-->
-                    <source
-                        data-srcset="//lorempixel.com/710/533/people/9/"
-                        media="(max-width: 990px)" />
-                    <source
-                        data-srcset="//lorempixel.com/930/698/people/8/"
-                        media="(max-width: 1024px)" />
 
-                    <source
-                        data-srcset="//lorempixel.com/1130/848/people/" />
-                    <!--[if IE 9]></audio><![endif]-->
-                    <img
-                        class="lazyload"
-                        data-src="//lorempixel.com/930/698/people/8/"
-                        alt="image with artdirection" />
-                </picture>
-
-                <picture>
-                    <source media="(max-width: 576px)"
-                            srcset="$FeaturedImage.FocusFillMax(540,360).URL 576w,
-                            $FeaturedImage.FocusFillMax(720,480).URL 768w"
-                            sizes="(min-width: 576px)">
-
-                    <img
-                         alt="F1 car in the gravel"
-                         title="F1 title car in the gravel"
-                         src="$FeaturedImage.FocusFillMax(240,160).URL 992w"
-                         class="lazyload"
-                         sizes="(min-width: 1066px) 689px,
-                calc(75vw - 137px)">
-                </picture>
             </div>
         <% end_loop %>
     </div>
