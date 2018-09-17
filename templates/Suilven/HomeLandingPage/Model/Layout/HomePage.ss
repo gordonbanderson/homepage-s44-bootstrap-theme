@@ -1,7 +1,7 @@
 <% include FeaturedSlider %>
 
 <main role="main" class="container">
-    <div class="row">
+    <div class="row blogposts">
         <% loop $UnFeaturedPosts %>
             <div class="col col-12 col-sm-6 col-md-4 col-lg-3">
                 <h4><a href="$Link">$Title</a></h4>
