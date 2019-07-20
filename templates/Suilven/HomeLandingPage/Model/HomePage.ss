@@ -2,6 +2,7 @@
 <html lang="$ContentLocale">
 <head>
     <% base_tag %>
+    $Favicons("favicons/")
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><% if $URLSegment == 'home' %>$SiteConfig.Title<% else %><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %>
