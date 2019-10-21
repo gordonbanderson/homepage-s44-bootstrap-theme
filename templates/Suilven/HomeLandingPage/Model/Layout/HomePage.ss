@@ -1,5 +1,6 @@
 <% include FeaturedSlider %>
 
+<div class="blogposts_container container-fluid">
 <main role="main" class="container">
     <div class="row blogposts">
         <% loop $UnFeaturedPosts %>
@@ -47,5 +48,6 @@
         <% end_loop %>
     </div>
 </main>
+</div>
 
 <% include Footer %>
