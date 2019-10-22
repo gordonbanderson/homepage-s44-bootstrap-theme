@@ -42,6 +42,8 @@
                     </picture>
                 </noscript>
                 </a>
+                <div class="publishedDate">$PublishDate.Format('d/M/Y')</div>
+
                 <h4><a href="$Link">$Title</a></h4>
 
             </div>
